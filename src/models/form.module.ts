@@ -1176,6 +1176,7 @@ export class FormModule {
       type,
       location,
       user_id,
+      filter_by_owner = true,
       min_price,
       max_price,
       amenities,
@@ -1200,7 +1201,7 @@ export class FormModule {
     // ============================================================
     // USER
     // ============================================================
-    if (user_id) {
+    if (user_id && filter_by_owner) {
       baseWhere += ` AND pf.user_id = ?`;
       baseParams.push(user_id);
     }

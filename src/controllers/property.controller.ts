@@ -458,6 +458,7 @@ export class PropertyController {
         location: location ? String(location) : null,
 
         user_id: user_id ? Number(user_id) : null,
+        filter_by_owner: false,
 
         min_price:
           min_price !== undefined && min_price !== ""
