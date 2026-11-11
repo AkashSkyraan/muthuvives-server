@@ -904,7 +904,7 @@ class FormModule {
     //   };
     // }
     static async getPropertyBasedOnTypes(data) {
-        const { status, type, location, user_id, min_price, max_price, amenities, prop_highlights, search, facingDirection, searchLoc, page, limit, offset, } = data;
+        const { status, type, location, user_id, filter_by_owner = true, min_price, max_price, amenities, prop_highlights, search, facingDirection, searchLoc, page, limit, offset, } = data;
         // ============================================================
         // BASE WHERE
         // ============================================================
@@ -915,7 +915,7 @@ class FormModule {
         // ============================================================
         // USER
         // ============================================================
-        if (user_id) {
+        if (user_id && filter_by_owner) {
             baseWhere += ` AND pf.user_id = ?`;
             baseParams.push(user_id);
         }

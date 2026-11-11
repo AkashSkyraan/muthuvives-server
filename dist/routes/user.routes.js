@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const user_controller_1 = require("../controllers/user.controller");
 const router = (0, express_1.Router)();
+// changes for github and build check
 router.put("/update-profile", 
 /*
     #swagger.tags = ['5.User']
