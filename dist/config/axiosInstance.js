@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 const axiosConfig = axios_1.default.create({
-    baseURL: "https://transmodel.skyraantech.com/",
+    baseURL: "https://muthvivesproperties.com/",
     timeout: 30000,
     headers: {
         "Content-Type": "application/json",
