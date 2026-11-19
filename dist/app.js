@@ -50,10 +50,10 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use("/api", routes_1.default);
 app.use((0, morgan_1.default)("dev"));
 app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_output_json_1.default));
-app.use("/src/uploads/images", (req, res, next) => {
+app.use("/src/uploads", (req, res, next) => {
     res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
     next();
-}, express_1.default.static(path_1.default.join(process.cwd(), "src", "uploads", "images")));
+}, express_1.default.static(path_1.default.join(process.cwd(), "src", "uploads")));
 const PORT = process.env.PORT || 5000;
 app.get("/check", (req, res) => {
     res.send("API working");

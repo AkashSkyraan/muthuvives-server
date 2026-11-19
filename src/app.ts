@@ -58,12 +58,12 @@ app.use(morgan("dev"));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(
-  "/src/uploads/images",
+  "/src/uploads",
   (req: Request, res: Response, next) => {
     res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
     next();
   },
-  express.static(path.join(process.cwd(), "src", "uploads", "images")),
+  express.static(path.join(process.cwd(), "src", "uploads")),
 );
 
 const PORT = process.env.PORT || 5000;

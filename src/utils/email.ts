@@ -20,9 +20,9 @@ export const sendEmailOTP = async (
     purpose === 1 ? "complete your registration" : "login to your account";
 
   await transporter.sendMail({
-    from: `"Muthu Vive Properties" <${process.env.SMTP_USER}>`,
+    from: `"MuthVive's Properties" <${process.env.SMTP_USER}>`,
     to: email,
-    subject: "Your OTP - Muthu Vive Properties",
+    subject: "Your OTP - MuthVive's Properties",
     html: `
       <!DOCTYPE html>
       <html>
@@ -63,7 +63,7 @@ export const sendEmailOTP = async (
                   <!-- Header -->
                   <tr>
                     <td style="
-                      background-color: #077442;
+                      background-color: #165BEF;
                       padding: 25px;
                       text-align: center;
                     ">
@@ -72,7 +72,7 @@ export const sendEmailOTP = async (
                         color: #ffffff;
                         font-size: 24px;
                       ">
-                        Muthu Vive Properties
+                        MuthVive's Properties
                       </h1>
                     </td>
                   </tr>
@@ -116,10 +116,10 @@ export const sendEmailOTP = async (
                         <span style="
                           display: inline-block;
                           padding: 15px 30px;
-                          background-color: #f0fdf4;
-                          border: 1px solid #077442;
+                          background-color: #E8F0FF;
+                          border: 1px solid #165BEF;
                           border-radius: 8px;
-                          color: #077442;
+                          color: #165BEF;
                           font-size: 30px;
                           font-weight: bold;
                           letter-spacing: 8px;
@@ -173,7 +173,7 @@ export const sendEmailOTP = async (
                         color: #777777;
                         font-size: 12px;
                       ">
-                        © ${new Date().getFullYear()} Muthu Vive Properties.
+                        © ${new Date().getFullYear()} MuthVive's Properties.
                         All rights reserved.
                       </p>
                     </td>
